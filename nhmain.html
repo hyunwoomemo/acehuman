@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="main.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>농협하나로마트</title>
+    <link rel="stylesheet" href="nhstyle.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['store', 'top five sales points'],
+          ['남양',     159579609],
+          ['안중',      208562658],
+          ['동탄',  127606937],
+          ['오산', 220226919],
+          ['홍천',    522983590]
+        ]);
+
+        var options = {
+            title: '22년 1~4월 매출 top 5'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+}
+    </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['month', '홍천', '남양', '안중', '오산'],
+          ['1월',  129246654, 20456826, 8733791, 0],
+          ['2월',  115635937, 57166060, 75711736, 96126786],
+          ['3월',  134093387, 41746337, 61825059, 64528725],
+          ['4월',  144007612, 40210386, 62292072, 59571408]
+        ]);
+
+        var options = {
+          title: '월별 매출',
+          curveType: 'function',
+          legend: { position: 'center' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <a href=""><img src="images/nhlogo.png" alt="" width="40%"></a>
+                </div>
+                <div class="links">
+                    <ul>
+                        <li><a href=""><img src="images/acelogo.png" alt=""></a></li>
+                        <li><a href=""><img src="images/kakao.png" alt=""></a></li>
+                        <li><a href=""><img src="images/sheet.png" alt=""></a></li>
+                        <li><a href=""><img src="images/google.png" alt=""></a></li>
+                    </ul>
+                </div>
+            </header>
+            <div class="gnb">
+                <ul>
+                    <li><img src="" alt="">category</li>
+                    <li> <a href=""> 카테고리</a></li>
+                    <li> <a href="sales.html">매출 자료</a></li>
+                    <li> <a href="">직원 자료</a></li>
+                    <li> <a href="">지점 자료</a></li>
+                </ul>
+            </div>
+            <div class="slideinfo">
+                <div class="slideinfo_box">
+                    <div class="textbox">
+                    <p>🚀 5월 공지사항 :</p>
+                    <p id="info">하반기 프로모션 일정 세팅 / 인사 평가 관련 지점 방문 안내 예정</p> 
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="chartbox">
+                <div class="pie">
+                <div id="piechart" style="width: 100%; height: 100%;"></div>
+                </div>
+                <div class="curve">
+                <div id="curve_chart" style="width: 100%; height: 70%;"></div>
+                </div>
+            </div>
+            <div class="databox">
+                <ul>
+                    <li><a href="sales.html">매출 자료</a></li>
+                    <li><a href="">직원 자료</a></li>
+                    <li><a href="">지점 자료</a></li>
+                </ul>
+            </div>
+            <div class="noticebox">
+                결원 및 채용 필요한 지점 등 공지사항 섹션
+            </div>
+            <div class="locationbox">
+                지점 위치 지도 섹션
+            </div>
+            <div class="anchor">
+                <a href="">top</a>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

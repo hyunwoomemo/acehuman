@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>농협 하나로마트 관리 페이지</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <script language="javascript">
+        function login_page(form) {
+        //원하는 패스워드를 설정
+        if (form.pass.value=="gkskfh") {
+        //패스워드가 일치하면 이동할 문서의 경로
+        location="nhmain.html"
+        } else {
+        alert("패스워드가 틀립니다.")
+        }
+        }
+        </script>
+</head>
+<body>
+    <div class="container">
+    <div class="main">
+        <header>
+            <ul>
+                <li id="nhlogo"><a href=""><img src="images/nhlogo.png" alt="" width="50%"></a></li>
+            </ul>
+        </header>
+            <div class="login">
+                <p style="font-size: 2em; font-weight: bold; white-space: nowrap;">농협 하나로마트 관리자 페이지 <li id="acelogo"><a href=""><img src="images/acelogo.png" alt="" width="100%"></a></li></p> 
+                <form name="loginForm" id="loginform">
+                <p style="margin-bottom:30;">password</p>
+                <input name="pass" type="password" size="30" style="height: 30px;" id="input01">
+                <input type="button" value="확 인" onclick="login_page(this.form)" style="font-weight:bolder; font-size:1em; border-radius: 20px;" id="input02"><br>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

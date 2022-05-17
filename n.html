@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first</title>
+    <link rel="stylesheet" href="n.css">
+    <script language="javascript">
+        function login_page(form) {
+        //원하는 패스워드를 설정
+        if (form.pass.value=="gkskfh") {
+        //패스워드가 일치하면 이동할 문서의 경로
+        location="nhmain.html"
+        } else {
+        alert("패스워드가 틀립니다.")
+        }
+        }
+        </script>
+</head>
+<body>
+    <div class="container">
+        <input type="checkbox" id="popup">
+        <label for="popup"><img src="images/2103.q702.025_agricultural_harvest.jpg" alt="" width="20%"></label>
+        <div>
+            <div>
+                <div class="login">
+                    <form name="loginForm" id="loginform">
+                    <p style="margin-bottom:30;">password</p>
+                    <input name="pass" type="password" size="30" style="height: 30px;" id="input01">
+                    <input type="button" value="확 인" onclick="login_page(this.form)" style="font-weight:bolder; font-size:1em;" id="input02"><br>
+                    </form>
+                </div>
+                <label for="popup"></label>
+            </div>
+            <label for="popup"></label>
+        </div>
+    </div>
+</body>
+</html>

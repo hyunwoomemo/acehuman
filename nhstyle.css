@@ -1,0 +1,165 @@
+a {
+    color: black;
+}
+
+.gnb a:hover {
+    color: #359B44;
+    font-weight: bold;
+    background-color: #FDC349;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+*{
+    text-decoration: none;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.container {
+    max-width: 1920px;
+    background-image: url(images/background1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+}
+
+.wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    position: relative;
+
+}
+
+.container .wrapper header {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    background-color: white;
+    z-index: 5;
+}
+
+header .links ul{
+    display: flex;
+}
+
+header .links ul a img{
+    width: 50%;
+}
+
+.gnb ul {
+    display: flex;
+    margin: 50px auto;
+    max-width: 1440px;
+}
+
+.gnb ul li {
+    margin: auto 30px;
+}
+
+.slideinfo {
+    display: flex;
+    width: 1920px;
+    justify-content: flex-start;
+}
+
+.slideinfo_box {
+    width: 100vw;
+    height: 60px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.slideinfo_box p {
+    margin-left: 30px;
+}
+
+.slideinfo .slideinfo_box .textbox{
+    display: flex;
+    animation: textmove 10s linear both infinite;
+}
+
+.chartbox {
+    max-width: 1440px;
+    margin: 50px auto;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.pie {
+    animation: chart 0.5s linear both;
+}
+
+.curve {
+    animation: chart 0.5s linear both;
+}
+
+.databox ul {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.databox ul li a{
+    display: inline-block;
+    height: 150px;
+    background-color: beige;
+    width: 23vw;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 150px;
+}
+
+.noticebox {
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 30vh;
+    background-color: beige;
+    margin-bottom: 50px;
+}
+
+.locationbox {
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 30vh;
+    background-color: beige;
+    margin-bottom: 50px;
+}
+
+.anchor {
+    position: fixed;
+    left: 95%;
+    bottom: 5%;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#info {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+@keyframes chart {
+    from { transform: scale(0);}
+    to { transform: scale(1);}
+}
+
+@keyframes textmove {
+    0% { transform: translateX(300%);
+    }
+    100% { transform: translateX(-100%);}
+}
