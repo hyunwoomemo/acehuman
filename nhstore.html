@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="main.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>농협 하나로마트</title>
+    <link rel="stylesheet" href="nhstore.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/602a699ae6.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/js/chart.min.js"></script>
+</head>
+<body>
+    <div class="container">
+                    <!-- 사이드바 영역 -->
+                <input type="checkbox" id="menuicon" checked>
+                <label for="menuicon" id="sidebaricon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <!-- <label for="menuicon"><div class="background"></div></label> -->
+                <div class="sidebar">
+                <a href="nhmain.html" id="Dashboard"><i class="fa-solid fa-chart-line"></i><span>Dashboard</span></a>
+                <a href="nhsales.html" id="sales"><i class="fa-solid fa-piggy-bank"></i><span>sales</span></a>
+                <a href="nhstore.html" id="store"><i class="fa-solid fa-store"></i><span>store</span></a>
+                <a href="nhworker.html" id="worker"><i class="fa-solid fa-people-group"></i><span>worker</span></a>
+                <a href="nhfile.html" id="file"><i class="fa-solid fa-file"></i><span>file</span></a>
+                <label for="menuicon"><div class="siderbar_background"></div></label>
+            </div>
+            <!-- 헤더 영역 -->
+            <header>
+                    <div class="logo">
+                        <a href=""><img src="images/nhlogo.png" alt="" width="40%">
+                    </div>
+                    <div class="links">
+                        <ul>
+                            <li><a href=""><img src="images/acelogo.png" alt=""></a></li>
+                            <li><a href=""><img src="images/kakao.png" alt=""></a></li>
+                            <li><a href=""><img src="images/sheet.png" alt=""></a></li>
+                            <li><a href=""><img src="images/google.png" alt=""></a></li>
+                        </ul>
+                    </div>
+            </header>
+            <!-- 메인 컨텐츠 영역 -->
+                <div class="wrapper">
+                <div class="slideinfo">
+                    <div class="slideinfo_box">
+                        <div class="textbox">
+                        <p>🚀 5월 공지사항 :</p>
+                        <p id="info">하반기 프로모션 일정 세팅 / 인사 평가 관련 지점 방문 안내 예정</p> 
+                        </div>
+                    </div>
+                    </div>
+                    <div class="tablesection">
+                        <style type="text/css">
+                            .tg  {border-collapse:collapse;border-spacing:0;}
+                            .tg td{border-color:black;border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;
+                              overflow:hidden;padding:10px 5px;word-break:normal;}
+                            .tg th{border-color:black;border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;
+                              font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal; background-color: rgba(128, 128, 128, 0.192);}
+                            .tg .tg-0lax{text-align:center;vertical-align:middle}
+                            .tg .tg-0pky{border-color:inherit;text-align:center;vertical-align:middle}
+                            </style>
+                            <table class="tg" style="undefined;table-layout: fixed; width: 852px; height: 600PX;">
+                            <colgroup>
+                            <col style="width: 7%">
+                            <col style="width: 23%">
+                            <col style="width: 10%">
+                            <col style="width: 10%">
+                            <col style="width: 10%">
+                            <col style="width: 10%">
+                            <col style="width: 10%">
+                            <col style="width: 10%">
+                            <col style="width: 10%">
+                            </colgroup>
+                            <thead>
+                              <tr class="row1">
+                                <th class="tg-0lax">지점명</th>
+                                <th class="tg-0lax">주소</th>
+                                <th class="tg-0lax">고객사 담당자</th>
+                                <th class="tg-0lax">내부 담당자</th>
+                                <th class="tg-0pky">재직자수</th>
+                                <th class="tg-0lax">계약일</th>
+                                <th class="tg-0lax">계약만료일</th>
+                                <th class="tg-0pky">특이사항</th>
+                                <th class="tg-0pky">최근 방문일</th>
+                                <th class="tg-0pky">상태</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr class="row2">
+                                <td class="tg-0lax"><a href="nhworker_hongcheon.html">홍천</a></td>
+                                <td class="tg-0lax">본점:강원도 홍천군 홍천읍 꽃뫼로 87 <br><br>
+                                  연봉점:강원도 홍천군 홍천읍 연봉로6길 2 <br><br>
+                                  동부점:강원도 홍천군 홍천읍 갈마로 23 <br><br>
+                                  두촌점:강원도 홍천군 두촌면 자은장터길 16-1 <br><br>
+                                  급식센터:강원도 홍천군 홍천읍 홍천로 321-1</td>
+                                <td class="tg-0lax">조영희 부점장 <br> <br>
+                                  박명옥 부점장<br><br>
+                                  정영주 부점장<br><br>
+                                  신영섭 센터장</td>
+                                <td class="tg-0lax">최진영 대리<br><br>
+                                  김소연 대리</td>
+                                <td class="tg-0pky">52</td>
+                                <td class="tg-0lax">2019-07-01</td>
+                                <td class="tg-0lax">전 지점 매출 증가</td>
+                                <td class="tg-0pky">2022-05-16</td>
+                                <td class="tg-0pky">예상 매출 달성</td>
+                              </tr>
+                              <tr class="row3" style="background-color: rgb(253, 181, 181);">
+                                <td class="tg-0lax"><a href="nhworker_osan.html">오산</a></td>
+                                <td class="tg-0lax">경기도 오산시 경기대로 469</td>
+                                <td class="tg-0lax">이상열 부점장</td>
+                                <td class="tg-0lax">최진영 대리<br><br>
+                                  한창익 사원</td>
+                                <td class="tg-0pky">24</td>
+                                <td class="tg-0lax">2021-08-01</td>
+                                <td class="tg-0lax">매출 미달성으로 대앙 사항 필요</td>
+                                <td class="tg-0pky">2022-05-18</td>
+                                <td class="tg-0pky">예상 매출 미달성</td>
+                              </tr>
+                              <tr class="row4" style="background-color: rgb(253, 181, 181);">
+                                <td class="tg-0lax"><a href="nhworker_namwon.html">남원</a></td>
+                                <td class="tg-0lax">제주특별자치도 서귀포시 남원읍 태위로 678</td>
+                                <td class="tg-0lax">정진우 부점장</td>
+                                <td class="tg-0lax">제정민 과장<br><br>
+                                  한창익 사원</td>
+                                <td class="tg-0pky">11</td>
+                                <td class="tg-0lax">2019-11-01</td>
+                                <td class="tg-0lax">인력 충원 필요</td>
+                                <td class="tg-0pky">2022-05-03</td>
+                                <td class="tg-0pky">예상 매출 미달성</td>
+                              </tr>
+                              <tr class="row5">
+                                <td class="tg-0lax"><a href="nhworker_hwaseong.html">화성</a></td>
+                                <td class="tg-0lax">능동점:경기도 화성시 동탄 지성로<br><br>
+                                  기배점:경기도 화성시 기안남로 70 <br><br>  
+                                  안녕점:경기도 화성시 효행로 80</td>
+                                <td class="tg-0lax">권일우 부점장 <br><br>
+                                  최원일 부점장<br><br>
+                                  이성은 부점장</td>
+                                <td class="tg-0lax">이현우 대리<br><br>
+                                  조병환 주임</td>
+                                <td class="tg-0pky">15</td>
+                                <td class="tg-0lax">2014-01-01</td>
+                                <td class="tg-0lax">매출 달성중</td>
+                                <td class="tg-0pky">2022-05-16</td>
+                                <td class="tg-0pky">예상 매출 달성</td>
+                              </tr>
+                              <tr class="row6">
+                                <td class="tg-0lax"><a href="nhworker_pyeongtack.html">평택</a></td>
+                                <td class="tg-0lax">본점:경기도 평택시 안중읍 송담1로 17 <br><br>
+                                  청북점:경기도 평택시 청북읍 신포길 52 <br><br>
+                                  오성점:경기도 평택시 오성면 숙성시장길 28 </td>
+                                <td class="tg-0lax">이태훈 과장 <br><br>
+                                  이혜영 총무<br><br>
+                                  임연희 점장</td>
+                                <td class="tg-0lax">최진영 대리 <br><br>
+                                  이선아 주임</td>
+                                <td class="tg-0pky">25</td>
+                                <td class="tg-0lax">2018-12-01</td>
+                                <td class="tg-0lax">매출 달성으로 인한 목표 재설정</td>
+                                <td class="tg-0pky">2022-05-18</td>
+                                <td class="tg-0pky"> 예상 매출 달성</td>
+                              </tr>
+                              <tr class="row7" style="background-color: rgb(253, 181, 181);">
+                                <td class="tg-0lax"><a href="nhworker_dongtan.html">동탄</a></td>
+                                <td class="tg-0lax">동탄유통:경기도 화성시 동탄순환대로27길 30 <br><br>
+                                  동탄농협:경기도 화성시 10용사로 571</td>
+                                <td class="tg-0lax">현준용 과장 <br><br>
+                                  김병호 부점장 </td>
+                                <td class="tg-0lax">조병환 주임</td>
+                                <td class="tg-0pky">13</td>
+                                <td class="tg-0lax">2016-01-01</td>
+                                <td class="tg-0lax">행사 및 개선 사항 필요</td>
+                                <td class="tg-0pky">2022-05-13</td>
+                                <td class="tg-0pky">예상 매출 미달성</td>
+                              </tr>
+                            </tbody>
+                            </table>
+                            </div>
+                    </div>
+            </div>
+            <!-- 푸터 영역 -->
+                <div class="anchor">
+                    <a href="">top</a>
+                </div>
+            </div>
+            <!-- html 코드 끝 -->
+                <script src="main.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+                <script src="saleschart.js"></script>
+    </div>
+</body>
+</html>

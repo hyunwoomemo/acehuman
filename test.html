@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>매출 자료</title>
-    <link rel="stylesheet" href="sales.css">
-    <link rel="stylesheet" href="reset.css">
+    <title>test</title>
+    <link rel="stylesheet" href="test.css">
+    <script src="test.js"></script>
 </head>
 <body>
+    <div class="loader"></div>
     <div class="container">
         <div class="wrapper">
             <header>
@@ -162,5 +163,10 @@
               </div>
             </label>
             </div>
+            <script>
+                $(window).on('load',function(){
+                    $('.loader').fadeOut();
+                });
+            </script>
 </body>
 </html>

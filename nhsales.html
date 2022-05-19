@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="main.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>농협 하나로마트</title>
+    <link rel="stylesheet" href="nhsales.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/602a699ae6.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <script type="text/javascript" src="/js/chart.min.js"></script>
+</head>
+<body>
+    <div class="container">
+                    <!-- 사이드바 영역 -->
+                <input type="checkbox" id="menuicon" checked>
+                <label for="menuicon" id="sidebaricon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <!-- <label for="menuicon"><div class="background"></div></label> -->
+                <div class="sidebar">
+                <a href="nhmain.html" id="Dashboard"><i class="fa-solid fa-chart-line"></i><span>Dashboard</span></a>
+                <a href="nhsales.html" id="sales"><i class="fa-solid fa-piggy-bank"></i><span>sales</span></a>
+                <a href="nhstore.html" id="store"><i class="fa-solid fa-store"></i><span>store</span></a>
+                <a href="nhworker.html" id="worker"><i class="fa-solid fa-people-group"></i><span>worker</span></a>
+                <a href="nhfile.html" id="file"><i class="fa-solid fa-file"></i><span>file</span></a>
+                <label for="menuicon"><div class="siderbar_background"></div></label>
+            </div>
+            <!-- 헤더 영역 -->
+            <header>
+                    <div class="logo">
+                        <a href=""><img src="images/nhlogo.png" alt="" width="40%">
+                    </div>
+                    <div class="links">
+                        <ul>
+                            <li><a href=""><img src="images/acelogo.png" alt=""></a></li>
+                            <li><a href=""><img src="images/kakao.png" alt=""></a></li>
+                            <li><a href=""><img src="images/sheet.png" alt=""></a></li>
+                            <li><a href=""><img src="images/google.png" alt=""></a></li>
+                        </ul>
+                    </div>
+            </header>
+            <!-- 메인 컨텐츠 영역 -->
+                <div class="wrapper">
+                <div class="slideinfo">
+                    <div class="slideinfo_box">
+                        <div class="textbox">
+                        <p>🚀 5월 공지사항 :</p>
+                        <p id="info">하반기 프로모션 일정 세팅 / 인사 평가 관련 지점 방문 안내 예정</p> 
+                        </div>
+                    </div>
+                    </div>
+                    <!-- 지역별 매출 영역 -->
+                    <input type="checkbox" id="홍천check">
+                    <input type="checkbox" id="오산check">
+                    <input type="checkbox" id="남원check">
+                    <input type="checkbox" id="화성check">
+                    <input type="checkbox" id="평택check">
+                    <input type="checkbox" id="동탄check">
+                    <input type="checkbox" id="전체check">
+                    <input type="checkbox" id="지역tab" checked>
+                    <input type="checkbox" id="1월check">
+                    <input type="checkbox" id="2월check">
+                    <input type="checkbox" id="3월check">
+                    <input type="checkbox" id="4월check">
+                    <input type="checkbox" id="전체기간check">
+                    <input type="checkbox" id="기간tab">
+                    <div class="area_sales">
+                        <div class="area_sales_title">
+                            <div id="tabbox01">
+                                <div class="" id="wrappertabbox01">
+                            <i class="fa-solid fa-store"></i>
+                            <label for="지역tab"><p id="지역tab_id">지점별 매출</p></label>
+                        </div>
+                            <div class="area_sales_tab_section">
+                                <label for="홍천check" id="salesid01"><div class="area_sales_tabs" id="area_sales_tab1">홍천</div></label>
+                                <label for="오산check" id="salesid02"><div class="area_sales_tabs" id="area_sales_tab2">오산</div></label>
+                                <label for="남원check" id="salesid03"><div class="area_sales_tabs" id="area_sales_tab3">남원</div></label>
+                                <label for="화성check" id="salesid04"><div class="area_sales_tabs" id="area_sales_tab4">화성</div></label>
+                                <label for="평택check" id="salesid05"><div class="area_sales_tabs" id="area_sales_tab5">평택</div></label>
+                                <label for="동탄check" id="salesid06"><div class="area_sales_tabs" id="area_sales_tab6">동탄</div></label>
+                                <label for="전체check" id="salesid08"><div class="area_sales_tabs" id="area_sales_tab8">전체</div></label>
+                        </div>
+                        </div>
+                            <div id="tabbox02">
+                                <div id="wrappertabbox02">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <label for="기간tab"><p id="기간tab_id">기간별 매출</p></label>
+                        </div>
+                            <div class="date_sales_tab_section">
+                                <label for="1월check" id="salesid201"><div class="date_sales_tabs" id="date_sales_tab1">1월</div></label>
+                                <label for="2월check" id="salesid202"><div class="date_sales_tabs" id="date_sales_tab2">2월</div></label>
+                                <label for="3월check" id="salesid203"><div class="date_sales_tabs" id="date_sales_tab3">3월</div></label>
+                                <label for="4월check" id="salesid204"><div class="date_sales_tabs" id="date_sales_tab4">4월</div></label>
+                                <label for="전체기간check" id="salesid205"><div class="date_sales_tabs" id="date_sales_tab5">전체 기간</div></label>
+                        </div>
+                        </div>
+                        </div>
+                    <div class="area_sales_section">
+                        <div class="area_sales_boxs" id="area_sales_boxs1">홍천
+                            <div class="chartbox1">
+                                <style type="text/css">
+                                    .tg  {border-collapse:collapse;border-spacing:0;}
+                                    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                                      overflow:hidden;padding:10px 5px;word-break:normal;}
+                                    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                                      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+                                    .tg .tg-0lax{text-align:left;vertical-align:top}
+                                    </style>
+                                    <table class="tg">
+                                    <thead>
+                                      <tr>
+                                        <th class="tg-0lax"></th>
+                                        <th class="tg-0lax">1월</th>
+                                        <th class="tg-0lax">2월</th>
+                                        <th class="tg-0lax">3월</th>
+                                        <th class="tg-0lax">4월</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td class="tg-0lax">홍천</td>
+                                        <td class="tg-0lax">145,460,987</td>
+                                        <td class="tg-0lax">133,956,800</td>
+                                        <td class="tg-0lax">147,694,066</td>
+                                        <td class="tg-0lax">161,373,118</td>
+                                      </tr>
+                                    </tbody>
+                                    </table>
+                            </div>
+                        </div>
+                        <div class="area_sales_boxs" id="area_sales_boxs2">오산
+                            <div class="chartbox2">
+                                <style type="text/css">
+                                    .tg  {border-collapse:collapse;border-spacing:0;}
+                                    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                                      overflow:hidden;padding:10px 5px;word-break:normal;}
+                                    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                                      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+                                    .tg .tg-0lax{text-align:left;vertical-align:top}
+                                    </style>
+                                    <table class="tg">
+                                    <thead>
+                                      <tr>
+                                        <th class="tg-0lax"></th>
+                                        <th class="tg-0lax">1월</th>
+                                        <th class="tg-0lax">2월</th>
+                                        <th class="tg-0lax">3월</th>
+                                        <th class="tg-0lax">4월</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td class="tg-0lax">오산</td>
+                                        <td class="tg-0lax"></td>
+                                        <td class="tg-0lax">96,126,786</td>
+                                        <td class="tg-0lax">64,528,725</td>
+                                        <td class="tg-0lax">59,571,408</td>
+                                      </tr>
+                                    </tbody>
+                                    </table>
+                            </div>
+                        </div>
+                        <div class="area_sales_boxs" id="area_sales_boxs3">남원
+                            <div class="chartbox3">
+                                <style type="text/css">
+                                    .tg  {border-collapse:collapse;border-spacing:0;}
+                                    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                                      overflow:hidden;padding:10px 5px;word-break:normal;}
+                                    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                                      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+                                    .tg .tg-0lax{text-align:left;vertical-align:top}
+                                    </style>
+                                    <table class="tg">
+                                    <thead>
+                                      <tr>
+                                        <th class="tg-0lax"></th>
+                                        <th class="tg-0lax">1월</th>
+                                        <th class="tg-0lax">2월</th>
+                                        <th class="tg-0lax">3월</th>
+                                        <th class="tg-0lax">4월</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td class="tg-0lax">남원</td>
+                                        <td class="tg-0lax"></td>
+                                        <td class="tg-0lax">22,899,212</td>
+                                        <td class="tg-0lax">22,438,367</td>
+                                        <td class="tg-0lax">27,237,281</td>
+                                      </tr>
+                                    </tbody>
+                                    </table>
+                            </div>
+                        </div>
+                        <div class="area_sales_boxs" id="area_sales_boxs4">화성
+                            <div class="chartbox4">
+                                <style type="text/css">
+                                    .tg  {border-collapse:collapse;border-spacing:0;}
+                                    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                                      overflow:hidden;padding:10px 5px;word-break:normal;}
+                                    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                                      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+                                    .tg .tg-0lax{text-align:left;vertical-align:top}
+                                    </style>
+                                    <table class="tg">
+                                    <thead>
+                                      <tr>
+                                        <th class="tg-0lax"></th>
+                                        <th class="tg-0lax">1월</th>
+                                        <th class="tg-0lax">2월</th>
+                                        <th class="tg-0lax">3월</th>
+                                        <th class="tg-0lax">4월</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td class="tg-0lax">화성</td>
+                                        <td class="tg-0lax">59,578,903</td>
+                                        <td class="tg-0lax">187,702,023</td>
+                                        <td class="tg-0lax">98,519,453</td>
+                                        <td class="tg-0lax">101,840,090</td>
+                                      </tr>
+                                    </tbody>
+                                    </table>
+                            </div>
+                        </div>
+                        <div class="area_sales_boxs" id="area_sales_boxs5">평택
+                            <div class="chartbox5">
+                                <style type="text/css">
+                                    .tg  {border-collapse:collapse;border-spacing:0;}
+                                    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                                      overflow:hidden;padding:10px 5px;word-break:normal;}
+                                    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                                      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+                                    .tg .tg-0lax{text-align:left;vertical-align:top}
+                                    </style>
+                                    <table class="tg">
+                                    <thead>
+                                      <tr>
+                                        <th class="tg-0lax"></th>
+                                        <th class="tg-0lax">1월</th>
+                                        <th class="tg-0lax">2월</th>
+                                        <th class="tg-0lax">3월</th>
+                                        <th class="tg-0lax">4월</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td class="tg-0lax">평택</td>
+                                        <td class="tg-0lax">52,468,755</td>
+                                        <td class="tg-0lax">76,876,524</td>
+                                        <td class="tg-0lax">78,924,572</td>
+                                        <td class="tg-0lax">85,258,711</td>
+                                      </tr>
+                                    </tbody>
+                                    </table>
+                            </div>
+                        </div>
+                        <div class="area_sales_boxs" id="area_sales_boxs6">동탄
+                            <div class="chartbox6">
+                                <style type="text/css">
+                                    .tg  {border-collapse:collapse;border-spacing:0;}
+                                    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                                      overflow:hidden;padding:10px 5px;word-break:normal;}
+                                    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                                      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+                                    .tg .tg-0lax{text-align:left;vertical-align:top}
+                                    </style>
+                                    <table class="tg">
+                                    <thead>
+                                      <tr>
+                                        <th class="tg-0lax"></th>
+                                        <th class="tg-0lax">1월</th>
+                                        <th class="tg-0lax">2월</th>
+                                        <th class="tg-0lax">3월</th>
+                                        <th class="tg-0lax">4월</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td class="tg-0lax">동탄</td>
+                                        <td class="tg-0lax">40,833,621</td>
+                                        <td class="tg-0lax">68,984,316</td>
+                                        <td class="tg-0lax">26,826,032</td>
+                                        <td class="tg-0lax">50,544,706</td>
+                                      </tr>
+                                    </tbody>
+                                    </table>
+                            </div>
+                        </div>
+                        <div class="area_sales_boxs" id="area_sales_boxs8">전지역
+                            <div class="chart7">
+                                <style type="text/css">
+                                    .tg  {border-collapse:collapse;border-spacing:0;}
+                                    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                                      overflow:hidden;padding:10px 5px;word-break:normal;}
+                                    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                                      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+                                    .tg .tg-0lax{text-align:left;vertical-align:top}
+                                    </style>
+                                    <table class="tg">
+                                    <thead>
+                                      <tr>
+                                        <th class="tg-0lax"></th>
+                                        <th class="tg-0lax">1월</th>
+                                        <th class="tg-0lax">2월</th>
+                                        <th class="tg-0lax">3월</th>
+                                        <th class="tg-0lax">4월</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td class="tg-0lax">홍천</td>
+                                        <td class="tg-0lax">145,460,987</td>
+                                        <td class="tg-0lax">133,956,800</td>
+                                        <td class="tg-0lax">147,694,066</td>
+                                        <td class="tg-0lax">161,373,118</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-0lax">오산</td>
+                                        <td class="tg-0lax"></td>
+                                        <td class="tg-0lax">96,126,786</td>
+                                        <td class="tg-0lax">64,528,725</td>
+                                        <td class="tg-0lax">59,571,408</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-0lax">남원</td>
+                                        <td class="tg-0lax"></td>
+                                        <td class="tg-0lax">22,899,212</td>
+                                        <td class="tg-0lax">22,438,367</td>
+                                        <td class="tg-0lax">27,237,281</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-0lax">화성</td>
+                                        <td class="tg-0lax">59,578,903</td>
+                                        <td class="tg-0lax">187,702,023</td>
+                                        <td class="tg-0lax">98,519,453</td>
+                                        <td class="tg-0lax">101,840,090</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-0lax">평택</td>
+                                        <td class="tg-0lax">52,468,755</td>
+                                        <td class="tg-0lax">76,876,524</td>
+                                        <td class="tg-0lax">78,924,572</td>
+                                        <td class="tg-0lax">85,258,711</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-0lax">동탄</td>
+                                        <td class="tg-0lax">40,833,621</td>
+                                        <td class="tg-0lax">68,984,316</td>
+                                        <td class="tg-0lax">26,826,032</td>
+                                        <td class="tg-0lax">50,544,706</td>
+                                      </tr>
+                                    </tbody>
+                                    </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="date_sales_section">
+                        <div class="date_sales_boxs" id="date_sales_boxs1">1월
+                            <div class="chartbox8">
+                                <style type="text/css">
+                                    .tg  {border-collapse:collapse;border-spacing:0;}
+                                    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                                      overflow:hidden;padding:10px 5px;word-break:normal;}
+                                    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                                      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+                                    .tg .tg-baqh{text-align:center;vertical-align:top}
+                                    </style>
+                                    <table class="tg">
+                                    <thead>
+                                      <tr>
+                                        <th class="tg-baqh"></th>
+                                        <th class="tg-baqh">홍천</th>
+                                        <th class="tg-baqh">오산</th>
+                                        <th class="tg-baqh">남원</th>
+                                        <th class="tg-baqh">화성</th>
+                                        <th class="tg-baqh">평택</th>
+                                        <th class="tg-baqh">동탄</th>
+                                        <th class="tg-baqh">기타</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td class="tg-baqh">1월</td>
+                                        <td class="tg-baqh">145,460,987</td>
+                                        <td class="tg-baqh"></td>
+                                        <td class="tg-baqh"></td>
+                                        <td class="tg-baqh">59,578,903</td>
+                                        <td class="tg-baqh">52,468,755</td>
+                                        <td class="tg-baqh">40,833,621</td>
+                                        <td class="tg-baqh">248,000,000</td>
+                                      </tr>
+                                    </tbody>
+                                    </table>
+                            </div>
+                        </div>
+                        <div class="date_sales_boxs" id="date_sales_boxs2">2월
+                            <div class="chartbox8">
+                                <style type="text/css">
+                                    .tg  {border-collapse:collapse;border-spacing:0;}
+                                    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                                      overflow:hidden;padding:10px 5px;word-break:normal;}
+                                    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                                      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+                                    .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+                                    </style>
+                                    <table class="tg">
+                                    <thead>
+                                      <tr>
+                                        <th class="tg-c3ow"></th>
+                                        <th class="tg-c3ow">홍천</th>
+                                        <th class="tg-c3ow">오산</th>
+                                        <th class="tg-c3ow">남원</th>
+                                        <th class="tg-c3ow">화성</th>
+                                        <th class="tg-c3ow">평택</th>
+                                        <th class="tg-c3ow">동탄</th>
+                                        <th class="tg-c3ow">기타</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td class="tg-c3ow">2월</td>
+                                        <td class="tg-c3ow">133,956,800</td>
+                                        <td class="tg-c3ow">96,126,786</td>
+                                        <td class="tg-c3ow">22,899,212</td>
+                                        <td class="tg-c3ow">187,702,023</td>
+                                        <td class="tg-c3ow">76,876,524</td>
+                                        <td class="tg-c3ow">68,984,316</td>
+                                        <td class="tg-c3ow">255,000,000</td>
+                                      </tr>
+                                    </tbody>
+                                    </table>
+                            </div>
+                        </div>
+                        <div class="date_sales_boxs" id="date_sales_boxs3">3월
+                            <div class="chartbox9">
+                                <style type="text/css">
+                                    .tg  {border-collapse:collapse;border-spacing:0;}
+                                    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                                      overflow:hidden;padding:10px 5px;word-break:normal;}
+                                    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                                      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+                                    .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+                                    </style>
+                                    <table class="tg">
+                                    <thead>
+                                      <tr>
+                                        <th class="tg-c3ow"></th>
+                                        <th class="tg-c3ow">홍천</th>
+                                        <th class="tg-c3ow">오산</th>
+                                        <th class="tg-c3ow">남원</th>
+                                        <th class="tg-c3ow">화성</th>
+                                        <th class="tg-c3ow">평택</th>
+                                        <th class="tg-c3ow">동탄</th>
+                                        <th class="tg-c3ow">기타</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td class="tg-c3ow">3월</td>
+                                        <td class="tg-c3ow">147,694,066</td>
+                                        <td class="tg-c3ow">64,528,725</td>
+                                        <td class="tg-c3ow">22,438,367</td>
+                                        <td class="tg-c3ow">98,519,453</td>
+                                        <td class="tg-c3ow">78,924,572</td>
+                                        <td class="tg-c3ow">26,826,032</td>
+                                        <td class="tg-c3ow">275,000,000</td>
+                                      </tr>
+                                    </tbody>
+                                    </table>
+                            </div>
+                        </div>
+                        <div class="date_sales_boxs" id="date_sales_boxs4">4월
+                            <div class="chartbox10">
+                                <style type="text/css">
+                                    .tg  {border-collapse:collapse;border-spacing:0;}
+                                    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                                      overflow:hidden;padding:10px 5px;word-break:normal;}
+                                    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                                      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+                                    .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+                                    </style>
+                                    <table class="tg">
+                                    <thead>
+                                      <tr>
+                                        <th class="tg-c3ow"></th>
+                                        <th class="tg-c3ow">홍천</th>
+                                        <th class="tg-c3ow">오산</th>
+                                        <th class="tg-c3ow">남원</th>
+                                        <th class="tg-c3ow">화성</th>
+                                        <th class="tg-c3ow">평택</th>
+                                        <th class="tg-c3ow">동탄</th>
+                                        <th class="tg-c3ow">기타</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td class="tg-c3ow">4월</td>
+                                        <td class="tg-c3ow">161,373,118</td>
+                                        <td class="tg-c3ow">59,571,408</td>
+                                        <td class="tg-c3ow">27,237,281</td>
+                                        <td class="tg-c3ow">101,840,090</td>
+                                        <td class="tg-c3ow">85,258,711</td>
+                                        <td class="tg-c3ow">50,544,706</td>
+                                        <td class="tg-c3ow">282,000,000</td>
+                                      </tr>
+                                    </tbody>
+                                    </table>
+                            </div>
+                        </div>
+                        <div class="date_sales_boxs" id="date_sales_boxs5">전체 기간
+                            <div class="chartbox11">
+                                <style type="text/css">
+                                    .tg  {border-collapse:collapse;border-spacing:0;}
+                                    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                                      overflow:hidden;padding:10px 5px;word-break:normal;}
+                                    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                                      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+                                    .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+                                    </style>
+                                    <table class="tg">
+                                    <thead>
+                                      <tr>
+                                        <th class="tg-c3ow"></th>
+                                        <th class="tg-c3ow">홍천</th>
+                                        <th class="tg-c3ow">오산</th>
+                                        <th class="tg-c3ow">남원</th>
+                                        <th class="tg-c3ow">화성</th>
+                                        <th class="tg-c3ow">평택</th>
+                                        <th class="tg-c3ow">동탄</th>
+                                        <th class="tg-c3ow">기타</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td class="tg-c3ow">1월</td>
+                                        <td class="tg-c3ow">145,460,987</td>
+                                        <td class="tg-c3ow"></td>
+                                        <td class="tg-c3ow"></td>
+                                        <td class="tg-c3ow">59,578,903</td>
+                                        <td class="tg-c3ow">52,468,755</td>
+                                        <td class="tg-c3ow">40,833,621</td>
+                                        <td class="tg-c3ow">248,000,000</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-c3ow">2월</td>
+                                        <td class="tg-c3ow">133,956,800</td>
+                                        <td class="tg-c3ow">96,126,786</td>
+                                        <td class="tg-c3ow">22,899,212</td>
+                                        <td class="tg-c3ow">187,702,023</td>
+                                        <td class="tg-c3ow">76,876,524</td>
+                                        <td class="tg-c3ow">68,984,316</td>
+                                        <td class="tg-c3ow">255,000,000</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-c3ow">3월</td>
+                                        <td class="tg-c3ow">147,694,066</td>
+                                        <td class="tg-c3ow">64,528,725</td>
+                                        <td class="tg-c3ow">22,438,367</td>
+                                        <td class="tg-c3ow">98,519,453</td>
+                                        <td class="tg-c3ow">78,924,572</td>
+                                        <td class="tg-c3ow">26,826,032</td>
+                                        <td class="tg-c3ow">275,000,000</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-c3ow">4월</td>
+                                        <td class="tg-c3ow">161,373,118</td>
+                                        <td class="tg-c3ow">59,571,408</td>
+                                        <td class="tg-c3ow">27,237,281</td>
+                                        <td class="tg-c3ow">101,840,090</td>
+                                        <td class="tg-c3ow">85,258,711</td>
+                                        <td class="tg-c3ow">50,544,706</td>
+                                        <td class="tg-c3ow">282,000,000</td>
+                                      </tr>
+                                    </tbody>
+                                    </table>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            </div>
+            <!-- 푸터 영역 -->
+                <div class="anchor">
+                    <a href="">top</a>
+                </div>
+            </div>
+            <!-- html 코드 끝 -->
+                <script src="main.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+                <script src="saleschart.js"></script>
+    </div>
+</body>
+</html>

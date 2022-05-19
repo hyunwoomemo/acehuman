@@ -5,123 +5,221 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>농협하나로마트</title>
+    <title>농협 하나로마트</title>
     <link rel="stylesheet" href="nhstyle.css">
     <link rel="stylesheet" href="reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-
-        var data = google.visualization.arrayToDataTable([
-          ['store', 'top five sales points'],
-          ['남양',     159579609],
-          ['안중',      208562658],
-          ['동탄',  127606937],
-          ['오산', 220226919],
-          ['홍천',    522983590]
-        ]);
-
-        var options = {
-            title: '22년 1~4월 매출 top 5'
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-        chart.draw(data, options);
-}
-    </script>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['month', '홍천', '남양', '안중', '오산'],
-          ['1월',  129246654, 20456826, 8733791, 0],
-          ['2월',  115635937, 57166060, 75711736, 96126786],
-          ['3월',  134093387, 41746337, 61825059, 64528725],
-          ['4월',  144007612, 40210386, 62292072, 59571408]
-        ]);
-
-        var options = {
-          title: '월별 매출',
-          curveType: 'function',
-          legend: { position: 'center' }
-        };
-
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-
-        chart.draw(data, options);
-      }
-    </script>
+    <script src="https://kit.fontawesome.com/602a699ae6.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
-        <div class="wrapper">
-            <header>
-                <div class="logo">
-                    <a href=""><img src="images/nhlogo.png" alt="" width="40%"></a>
-                </div>
-                <div class="links">
-                    <ul>
-                        <li><a href=""><img src="images/acelogo.png" alt=""></a></li>
-                        <li><a href=""><img src="images/kakao.png" alt=""></a></li>
-                        <li><a href=""><img src="images/sheet.png" alt=""></a></li>
-                        <li><a href=""><img src="images/google.png" alt=""></a></li>
-                    </ul>
-                </div>
-            </header>
-            <div class="gnb">
-                <ul>
-                    <li><img src="" alt="">category</li>
-                    <li> <a href=""> 카테고리</a></li>
-                    <li> <a href="sales.html">매출 자료</a></li>
-                    <li> <a href="">직원 자료</a></li>
-                    <li> <a href="">지점 자료</a></li>
-                </ul>
+                    <!-- 사이드바 영역 -->
+                <input type="checkbox" id="menuicon" checked>
+                <label for="menuicon" id="sidebaricon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <label for="menuicon"><div class="background"></div></label>
+                <div class="sidebar">
+                <a href="nhmain.html" id="Dashboard"><i class="fa-solid fa-chart-line"></i><span>Dashboard</span></a>
+                <a href="nhsales.html" id="sales"><i class="fa-solid fa-piggy-bank"></i><span>sales</span></a>
+                <a href="nhstore.html" id="store"><i class="fa-solid fa-store"></i><span>store</span></a>
+                <a href="nhworker.html" id="worker"><i class="fa-solid fa-people-group"></i><span>worker</span></a>
+                <a href="nhfile.html" id="file"><i class="fa-solid fa-file"></i><span>file</span></a>
+                <label for="menuicon"><div class="siderbar_background"></div></label>
             </div>
-            <div class="slideinfo">
-                <div class="slideinfo_box">
-                    <div class="textbox">
-                    <p>🚀 5월 공지사항 :</p>
-                    <p id="info">하반기 프로모션 일정 세팅 / 인사 평가 관련 지점 방문 안내 예정</p> 
+            <!-- 헤더 영역 -->
+            <header>
+                    <div class="logo">
+                        <a href=""><img src="images/nhlogo.png" alt="" width="40%">
+                    </div>
+                    <div class="links">
+                        <ul>
+                            <li><a href=""><img src="images/acelogo.png" alt=""></a></li>
+                            <li><a href=""><img src="images/kakao.png" alt=""></a></li>
+                            <li><a href=""><img src="images/sheet.png" alt=""></a></li>
+                            <li><a href=""><img src="images/google.png" alt=""></a></li>
+                        </ul>
+                    </div>
+            </header>
+            <!-- 메인 컨텐츠 영역 -->
+                <div class="wrapper">
+                <div class="slideinfo">
+                    <div class="slideinfo_box">
+                        <div class="textbox">
+                        <p>🚀 5월 공지사항 :</p>
+                        <p id="info">하반기 프로모션 일정 세팅 / 인사 평가 관련 지점 방문 안내 예정</p> 
+                        </div>
+                    </div>
+                    </div>
+                    <!-- 대시보드 영역 -->
+                    <div class="dashboardtitle">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    <h1>Analytics Dashboard</h1>
+                    <h2>2022.01.01~2022.04.30</h2>
+                </div>
+                <div class="cardsection">
+                        <!-- 서머리 영역 -->
+            <div class="cardcolmn1">
+                <div class="card-body" id="cb1">
+                        <div class="cbheader">
+                            <h1>금년 매출액</h1>
+                                <i class="fa-solid fa-fish"></i>
+                        </div>
+                    <div class="cbmain">
+                        22억원
+                    </div>
+                    <div class="cbfooter">
+                        <div class="rate" style="color: red;">-3.65%</div>
+                        <div class="date">Since last year</div>
                     </div>
                 </div>
+                <div class="card-body" id="cb2">
+                    <div class="cbheader">
+                        <h1>목표 매출액</h1>
+                            <i class="fa-solid fa-fish"></i>
+                    </div>
+                <div class="cbmain">
+                    78억원
                 </div>
             </div>
-            <div class="chartbox">
-                <div class="pie">
-                <div id="piechart" style="width: 100%; height: 100%;"></div>
+            </div>
+            <div class="cardcolmn2">
+                <div class="card-body" id="cb3">
+                    <div class="cbheader">
+                        <h1>달성률</h1>
+                            <i class="fa-solid fa-fish"></i>
+                    </div>
+                <div class="cbmain">
+                    28%
                 </div>
-                <div class="curve">
-                <div id="curve_chart" style="width: 100%; height: 70%;"></div>
+            </div>
+            <div class="card-body" id="cb4">
+                <div class="cbheader">
+                    <h1>재직 인원 증감률</h1>
+                        <i class="fa-solid fa-fish"></i>
                 </div>
+            <div class="cbmain">
+                27명
             </div>
-            <div class="databox">
-                <ul>
-                    <li><a href="sales.html">매출 자료</a></li>
-                    <li><a href="">직원 자료</a></li>
-                    <li><a href="">지점 자료</a></li>
-                </ul>
-            </div>
-            <div class="noticebox">
-                결원 및 채용 필요한 지점 등 공지사항 섹션
-            </div>
-            <div class="locationbox">
-                지점 위치 지도 섹션
-            </div>
-            <div class="anchor">
-                <a href="">top</a>
+            <div class="cbfooter">
+                <div class="rate" style="color: #359B44;">7.78%</div>
+                <div class="date">Since last month</div>
             </div>
         </div>
+            </div>
+            <div class="cartchart">
+                <div class="card-body" id="cb5">
+                    <div class="cb5header"></div>
+                    <div class="cb5chart">
+                       <canvas id="myChart" width="400px" height="300px"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper01230">
+            <div class="issuesection">
+                 <div class="issuesection_header">
+                    🚨Latest Project & Issue
+                </div>
+                <div class="issuesection_table">
+                    <style type="text/css">
+                        .tg  {border-collapse:collapse;border-spacing:0;}
+                        .tg td{border-color:black;border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;
+                          overflow:hidden;padding:10px 5px;word-break:normal;}
+                        .tg th{border-color:black;border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;
+                          font-weight:bold;overflow:hidden;padding:10px 5px;word-break:normal;}
+                        .tg .tg-wp8o{border-color:#000000;text-align:center;vertical-align:middle}
+                        .tg .tg-lmxn{border-color:#000000;text-align:left;vertical-align:middle}
+                        .tg .tg-0lax{text-align:center;vertical-align:middle}
+                        .tg .tg-73oq{border-color:#000000;text-align:left;vertical-align:middle}
+                        </style>
+                        <table class="tg" style="undefined;table-layout: fixed; width: 100%">
+                        <colgroup>
+                        <col style="width: 35%">
+                        <col style="width: 10%">
+                        <col style="width: 35%">
+                        <col style="width: 10%">
+                        <col style="width: 15%">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th class="tg-lmxn">프로젝트명</th>
+                            <th class="tg-0lax">시작일</th>
+                            <th class="tg-0lax">내용</th>
+                            <th class="tg-wp8o">상태</th>
+                            <th class="tg-73oq">담당자</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="tg-73oq">5월 매출 부진 업체 미팅</td>
+                            <td class="tg-0lax">5/2</td>
+                            <td class="tg-0lax">오산농협 전미주 주임 , 권희주 주임 의견 차이로 인한 충돌</td>
+                            <td class="tg-wp8o" id="sucess"><span style="background-color: #359B44; border-radius: 10px; padding: 2px 15px; color: white;">완료</span></td>
+                            <td class="tg-73oq">제정민</td>
+                          </tr>
+                          <tr>
+                            <td class="tg-73oq">오산농협 직원 평가</td>
+                            <td class="tg-0lax">5/7</td>
+                            <td class="tg-0lax">매출 부진 직원 정서준 평가 점수 미달로 인한 상담 개선 효과 유무 파악해야함</td>
+                            <td class="tg-wp8o" id="sucess"><span style="background-color: #359B44; border-radius: 10px; padding: 2px 15px; color: white;">완료</span></td>
+                            <td class="tg-73oq">조병환</td>
+                          </tr>
+                          <tr>
+                            <td class="tg-73oq">5월 재직자 생일 상품권 배급</td>
+                            <td class="tg-0lax">5/9</td>
+                            <td class="tg-0lax">홍천 판매 주력 상품 홍보 및 행사상품 실적 평가</td>
+                            <td class="tg-wp8o" id="sucess"><span style="background-color: #359B44; border-radius: 10px; padding: 2px 15px; color: white;">완료</span></td>
+                            <td class="tg-73oq">한창익</td>
+                          </tr>
+                          <tr>
+                            <td class="tg-73oq">태안농협(화성) 판매 실적 부진 직원 4명 판매교육 실시</td>
+                            <td class="tg-0lax">5/9</td>
+                            <td class="tg-0lax">5월 수산 제품 싯가 금액 협의</td>
+                            <td class="tg-wp8o" id="sucess"><span style="background-color: red; border-radius: 10px; padding: 2px 15px; color: white;">취소</span></td>
+                            <td class="tg-73oq">최진영</td>
+                          </tr>
+                          <tr>
+                            <td class="tg-73oq">홍천농협 4월 매출액 상승으로 인한 회식 및 판매 독려</td>
+                            <td class="tg-0lax">5/11</td>
+                            <td class="tg-0lax">태안농협 회식에서 나온 특이사항 브리핑</td>
+                            <td class="tg-wp8o" id="sucess"><span style="background-color: #359B44; border-radius: 10px; padding: 2px 15px; color: white;">완료</span></td>
+                            <td class="tg-73oq">제정민</td>
+                          </tr>
+                          <tr>
+                            <td class="tg-73oq">남원농협 상임이사 미팅 예정(신규 매장 추천)</td>
+                            <td class="tg-0lax">5/12</td>
+                            <td class="tg-0lax">매장 이동 대상 인원 ( 태안농협에서 오산농협 ) 파악</td>
+                            <td class="tg-wp8o" id="progress"><span style="background-color: #FDC349; border-radius: 10px; padding: 2px 15px; color: white;">진행중</span></td>
+                            <td class="tg-73oq">조병환</td>
+                          </tr>
+                          <tr>
+                            <td class="tg-73oq">동탄 하나로 유통 행사 기간 설정 및 시행</td>
+                            <td class="tg-0lax">5/14</td>
+                            <td class="tg-0lax">인원 누락 매장 파악 및 공유(금주까지)</td>
+                            <td class="tg-wp8o" id="progress"><span style="background-color: #FDC349; border-radius: 10px; padding: 2px 15px; color: white;">진행중</span></td>
+                            <td class="tg-73oq">한창익</td>
+                          </tr>
+                        </tbody>
+                        </table>
+                </div>
+            </div>
+            </div>
+        </div>
+            </div>
+            </div>
+            <!-- 푸터 영역 -->
+                <div class="anchor">
+                    <a href="">top</a>
+                </div>
+            </div>
+            <!-- html 코드 끝 -->
+                <script src="main.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+                <script src="my_chart.js"></script>
     </div>
-    <script src="main.js"></script>
 </body>
 </html>

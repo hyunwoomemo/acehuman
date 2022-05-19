@@ -1,0 +1,552 @@
+a {
+    color: black;
+}
+
+*{
+    text-decoration: none;
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1920px;
+    height: 100vh;
+    transition: 0.5s;
+    background-color: #f5f5f5;
+}
+
+.wrapper {
+    max-width: 81vw;
+    margin: 0 auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    opacity: 0.3;
+    background-color: #f5f5f5;
+}
+
+.container header {
+    max-width: 1400px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+header .links ul{
+    display: flex;
+}
+
+header .links ul a img{
+    width: 50%;
+}
+
+.sidebar {
+    background-color: #359B44;
+    margin-top: 72.42px;
+    padding-top: 20px;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    transition: 0.5s;
+    transition-property: left;
+    z-index: 999;
+    border-radius: 0 30px 30px 0;
+    background-image: url(images/Group\ 55.png);
+    background-size: contain;
+    background-position: 50% 80%;
+    background-repeat: no-repeat;
+}
+
+.sidebar #sales {
+    color: #FDC349;
+}
+
+.siderbar_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.sidebar h4 {
+    color: #ccc;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.sidebar a{
+    color: #fff;
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    text-decoration: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transition-property: background;
+}
+
+.sidebar a:hover{
+    background-color: #19b3d3;
+}
+
+.sidebar i {
+    padding-right: 10px;
+}
+
+#menuicon:checked ~ .sidebar{
+    left: -190px;
+}
+
+#menuicon:checked ~ .sidebar a span {
+    display: none;
+}
+
+#menuicon:checked ~ .sidebar a{
+    font-size: 20px;
+    margin-left: 170px;
+    width: 80px;
+}
+
+#menuicon:checked ~ .wrapper{
+    opacity: 1;
+}
+
+#menuicon {
+    display: none;
+}
+
+.slideinfo {
+    display: flex;
+    width: 1920px;
+    justify-content: flex-start;
+}
+
+.slideinfo_box {
+    width: 100vw;
+    height: 60px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.slideinfo_box p {
+    margin-left: 30px;
+}
+
+.slideinfo .slideinfo_box .textbox{
+    display: flex;
+    animation: textmove 10s linear both infinite;
+}
+
+.chartbox {
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 30px;
+}
+
+.chartbox #earning {
+    padding: 10px;
+    border: 2px solid #FDC349;
+    border-radius: 20px;
+}
+
+.chartbox #myChart {
+    padding: 10px;
+    border: 2px solid #FDC349;
+    border-radius: 20px;
+}
+
+.chartbox #chart3 {
+    padding: 10px;
+    border: 2px solid #FDC349;
+    border-radius: 20px;
+}
+
+.databox ul {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.databox ul li a{
+    display: inline-block;
+    height: 150px;
+    background-color: beige;
+    width: 23vw;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 150px;
+}
+
+.anchor {
+    position: fixed;
+    left: 95%;
+    bottom: 5%;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#info {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+
+@keyframes textmove {
+    0% { transform: translateX(300%);
+    }
+    100% { transform: translateX(-100%);}
+}
+
+input[id="menuicon"] {
+    display: none;
+}
+
+input[id="menuicon"] + label {
+    display: block;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+input[id="menuicon"] + label span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    border-radius: 30px;
+    background-color: #000;
+    transition: all .35s;
+}
+
+input[id="menuicon"]:checked + label span:nth-child(1) {
+    top: 0;
+    transform: rotate(0);
+}
+
+input[id="menuicon"]:checked + label span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+}
+
+input[id="menuicon"]:checked + label span:nth-child(3) {
+    bottom: 0;
+    transform: rotate(0);
+}
+
+input[id="menuicon"] + label span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+input[id="menuicon"] + label span:nth-child(2) {
+    opacity: 0;
+}
+
+input[id="menuicon"] + label span:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}
+
+input[id="menuicon"]:checked ~ .sidebar {
+    background-image: none;
+}
+
+.sidebar label {
+    margin: 20px auto;
+}
+
+#sidebaricon {
+    margin: 20px;
+    float: left;
+}
+
+.area_sales {
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+}
+
+.area_sales_title {
+    margin-top: 20px;
+    max-width: 1400px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+}
+
+#tabbox01 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 auto;
+    min-width: 500px;
+    padding: 20px;
+}
+
+#wrappertabbox01 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#wrappertabbox01:hover {
+    background-color: #FDC349;
+}
+
+#wrappertabbox02:hover {
+    background-color: #FDC349;
+}
+
+
+#tabbox02 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 auto;
+    justify-content: center;
+    padding: 20px;
+}
+
+#wrappertabbox02 {
+    display: flex;
+    align-items: center;
+}
+
+.area_sales_title p {
+    margin-left: 20px;
+    font-size: 1em;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.area_sales_title i {
+    color: #359B44;
+}
+
+.area_sales_tab_section {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.area_sales_tabs {
+    flex: 1 1 auto;
+    text-align: center;
+    background-color: #fff;
+    margin: 10px 10px;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+.area_sales_section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.area_sales_boxs {
+    background-color: white;
+    flex: 1 1 auto;
+    min-width: 500px;
+    min-height: 400px;
+    margin: 10px 10px;
+    padding: 10px;
+    display: none;
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+
+.date_sales_tab_section {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.date_sales_tabs {
+    flex: 1 1 auto;
+    text-align: center;
+    background-color: #fff;
+    margin: 10px 10px;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+.date_sales_section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.date_sales_boxs {
+    background-color: white;
+    flex: 1 1 auto;
+    min-width: 500px;
+    min-height: 400px;
+    margin: 10px 10px;
+    padding: 10px;
+    display: none;
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+
+input {
+    display: none;
+}
+
+[id="홍천check"]:checked ~ .area_sales .area_sales_section #area_sales_boxs1 {
+    display: block;
+}
+
+[id="홍천check"]:checked ~ .area_sales .area_sales_tab_section #salesid01 {
+    background-color: yellow;
+    border-radius: 50px;
+}
+
+[id="오산check"]:checked ~ .area_sales .area_sales_section #area_sales_boxs2 {
+    display: block;
+}
+[id="오산check"]:checked ~ .area_sales .area_sales_tab_section #salesid02 {
+    background-color: yellow;
+    border-radius: 50px;
+}
+
+[id="남원check"]:checked ~ .area_sales .area_sales_section #area_sales_boxs3 {
+    display: block;
+}
+[id="남원check"]:checked ~ .area_sales .area_sales_tab_section #salesid03 {
+    background-color: yellow;
+    border-radius: 50px;
+}
+[id="화성check"]:checked ~ .area_sales .area_sales_section #area_sales_boxs4 {
+    display: block;
+}
+[id="화성check"]:checked ~ .area_sales .area_sales_tab_section #salesid04 {
+    background-color: yellow;
+    border-radius: 50px;
+}
+
+[id="평택check"]:checked ~ .area_sales .area_sales_section #area_sales_boxs5 {
+    display: block;
+}
+[id="평택check"]:checked ~ .area_sales .area_sales_tab_section #salesid05 {
+    background-color: yellow;
+    border-radius: 50px;
+}
+
+[id="동탄check"]:checked ~ .area_sales .area_sales_section #area_sales_boxs6 {
+    display: block;
+}
+[id="동탄check"]:checked ~ .area_sales .area_sales_tab_section #salesid06 {
+    background-color: yellow;
+    border-radius: 50px;
+}
+
+[id="성남check"]:checked ~ .area_sales .area_sales_section #area_sales_boxs7 {
+    display: block;
+}
+[id="성남check"]:checked ~ .area_sales .area_sales_tab_section #salesid07 {
+    background-color: yellow;
+    border-radius: 50px;
+}
+
+[id="전체check"]:checked ~ .area_sales .area_sales_section #area_sales_boxs8 {
+    display: block;
+}
+[id="전체check"]:checked ~ .area_sales .area_sales_tab_section #salesid08 {
+    background-color: yellow;
+    border-radius: 50px;
+}
+
+[id="지역tab"]:checked ~ .area_sales .area_sales_tab_section .area_sales_tabs{
+    opacity: 1;
+    visibility: visible;
+}
+
+[id="지역tab"]:checked ~ .area_sales .area_sales_title #지역tab_id{
+    background-color: #FDC349;
+    border-radius: 30px;
+}
+
+[id="1월check"]:checked ~ .area_sales .date_sales_section #date_sales_boxs1 {
+    display: block;
+}
+[id="1월check"]:checked ~ .area_sales .date_sales_tab_section #salesid201 {
+    background-color: yellow;
+    border-radius: 50px;
+}
+[id="2월check"]:checked ~ .area_sales .date_sales_section #date_sales_boxs2 {
+    display: block;
+}
+[id="2월check"]:checked ~ .area_sales .date_sales_tab_section #salesid202 {
+    background-color: yellow;
+    border-radius: 50px;
+}
+[id="3월check"]:checked ~ .area_sales .date_sales_section #date_sales_boxs3 {
+    display: block;
+}
+[id="3월check"]:checked ~ .area_sales .date_sales_tab_section #salesid203 {
+    background-color: yellow;
+    border-radius: 50px;
+}
+[id="4월check"]:checked ~ .area_sales .date_sales_section #date_sales_boxs4 {
+    display: block;
+}
+[id="4월check"]:checked ~ .area_sales .date_sales_tab_section #salesid204 {
+    background-color: yellow;
+    border-radius: 50px;
+}
+[id="전체기간check"]:checked ~ .area_sales .date_sales_section #date_sales_boxs5 {
+    display: block;
+}
+[id="전체기간check"]:checked ~ .area_sales .date_sales_tab_section #salesid205 {
+    background-color: yellow;
+    border-radius: 50px;
+}
+
+[id="기간tab"]:checked ~ .area_sales .date_sales_tab_section .date_sales_tabs{
+    opacity: 1;
+    visibility: visible;
+}
+
+[id="기간tab"]:checked ~ .area_sales .area_sales_title #기간tab_id{
+    background-color: #FDC349;
+    border-radius: 30px;
+}
+
+.tabwrapper {
+    display: flex;
+}
+
+.tg{
+    margin-top: 7vw;
+    width: 100%;
+}

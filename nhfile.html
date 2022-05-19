@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="main.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>농협 하나로마트</title>
+    <link rel="stylesheet" href="nhfile.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/602a699ae6.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/js/chart.min.js"></script>
+</head>
+<body>
+    <div class="maincontainer">
+                    <!-- 사이드바 영역 -->
+                <input type="checkbox" id="menuicon" checked>
+                <label for="menuicon" id="sidebaricon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <!-- <label for="menuicon"><div class="background"></div></label> -->
+                <div class="sidebar">
+                <a href="nhmain.html" id="Dashboard"><i class="fa-solid fa-chart-line"></i><span>Dashboard</span></a>
+                <a href="nhsales.html" id="sales"><i class="fa-solid fa-piggy-bank"></i><span>sales</span></a>
+                <a href="nhstore.html" id="store"><i class="fa-solid fa-store"></i><span>store</span></a>
+                <a href="nhworker.html" id="worker"><i class="fa-solid fa-people-group"></i><span>worker</span></a>
+                <a href="nhfile.html" id="file"><i class="fa-solid fa-file"></i><span>file</span></a>
+                <label for="menuicon"><div class="siderbar_background"></div></label>
+            </div>
+            <!-- 헤더 영역 -->
+            <header>
+                    <div class="logo">
+                        <a href=""><img src="images/nhlogo.png" alt="" width="40%">
+                    </div>
+                    <div class="links">
+                        <ul>
+                            <li><a href=""><img src="images/acelogo.png" alt=""></a></li>
+                            <li><a href=""><img src="images/kakao.png" alt=""></a></li>
+                            <li><a href=""><img src="images/sheet.png" alt=""></a></li>
+                            <li><a href=""><img src="images/google.png" alt=""></a></li>
+                        </ul>
+                    </div>
+            </header>
+            <!-- 메인 컨텐츠 영역 -->
+                <div class="wrapper">
+                <div class="slideinfo">
+                    <div class="slideinfo_box">
+                        <div class="textbox">
+                        <p>🚀 5월 공지사항 :</p>
+                        <p id="info">하반기 프로모션 일정 세팅 / 인사 평가 관련 지점 방문 안내 예정</p> 
+                        </div>
+                    </div>
+                    </div>
+                    
+<section class="notice">
+    <div class="page-title">
+          <div class="container">
+              <h3>자료실</h3>
+          </div>
+      </div>
+  
+      <!-- board seach area -->
+      <div id="board-search">
+          <div class="container">
+              <div class="search-window">
+                  <form action="">
+                      <div class="search-wrap">
+                          <label for="search" class="blind">공지사항 내용 검색</label>
+                          <input id="search" type="search" name="" placeholder="검색어를 입력해주세요." value="">
+                          <button type="submit" class="btn btn-dark">검색</button>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+     
+    <!-- board list area -->
+      <div id="board-list">
+          <div class="container">
+              <table class="board-table">
+                  <thead>
+                  <tr>
+                      <th scope="col" class="th-num">번호</th>
+                      <th scope="col" class="th-title">제목</th>
+                      <th scope="col" class="th-style">유형</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                      <td>9</td>
+                      <th>
+                        <a href="#!">[공지사항] 개인정보 처리방침 변경안내처리방침</a>
+                        <p>테스트</p>
+                      </th>
+                      <td>공지사항</td>
+                  </tr>
+  
+                  <tr>
+                      <td>8</td>
+                      <th><a href="#!">홍천 지점 근무자 근무 계획서 파일<i class="fa-solid fa-paperclip" style="margin-left: 10px;"></i></a></th>
+                      <td>근무계획서</td>
+                  </tr>
+  
+                  <tr>
+                      <td>7</td>
+                      <th><a href="#!">재직자 파일<i class="fa-solid fa-paperclip" style="margin-left: 10px;"></i></a></th>
+                      <td>재직자</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <th><a href="#!">이슈 취합 자료<i class="fa-solid fa-paperclip" style="margin-left: 10px;"></i></a></th>
+                    <td>기타</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <th><a href="#!">품목별 판매 현황<i class="fa-solid fa-paperclip" style="margin-left: 10px;"></i></a></th>
+                    <td>매출자료</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <th><a href="#!">지점별 근무계획표<i class="fa-solid fa-paperclip" style="margin-left: 10px;"></i></a></th>
+                    <td>근무계획서</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <th><a href="#!">사원평가표 양식<i class="fa-solid fa-paperclip" style="margin-left: 10px;"></i></a></th>
+                    <td>평가표</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <th><a href="#!">수산 급여 테이블<i class="fa-solid fa-paperclip" style="margin-left: 10px;"></i></a></th>
+                    <td>매출자료</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <th><a href="#!">현장관리직 평가표 양식<i class="fa-solid fa-paperclip" style="margin-left: 10px;"></i></a></th>
+                    <td>평가표</td>
+                </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+  
+  </section>
+            </div>
+            <!-- 푸터 영역 -->
+                <div class="anchor"> 
+                    <a href="">top</a>
+                </div>
+            </div>
+            <!-- html 코드 끝 -->
+                <script src="main.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+                <script src="saleschart.js"></script>
+    </div>
+</body>
+</html>

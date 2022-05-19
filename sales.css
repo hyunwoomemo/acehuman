@@ -131,7 +131,7 @@ header .links ul a img{
 }
 
 .modalbox {
-    width: 50vw;
+    width: 30vw;
     border: 1px solid black;
     position: absolute;
     z-index: 1;
@@ -139,6 +139,7 @@ header .links ul a img{
     left: 60%;
     transform: translate(-50%,-50%);
     background-color: white;
+    transition: all 0.3s linear;
 }
 
 .modalbox_header {
@@ -165,10 +166,13 @@ header .links ul a img{
     justify-content: center;
     align-items: center;
     line-height: 4em;
+    z-index: 999;
+    cursor: pointer;
+    height: 20vh;
 }
 
 .modalbox_content p {
-    font-size: 2em;
+    font-size: 1em;
     text-align: center;
     font-weight: 900;
     color: #D03B3B;
@@ -183,3 +187,15 @@ header .links ul a img{
     width: 40%;
     height: 40%;
 }
+
+#call {
+    position: absolute;
+    top: 65%;
+    left: 110%;
+    transform: translate(-50%,-50%);
+    transition: all 0.5s linear;
+    z-index: 998;
+}
+
+[id="modal"]:checked ~ .modalbox { transform: translate(-100%,-50%);}
+[id="modal"]:checked ~ a #call {transform: translate(-900%,-50%); }
